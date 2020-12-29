@@ -166,7 +166,7 @@ async function all_task_list(filter, my_task){
                 )
                 for(let i = 0; i < result.records.length; i++){
                     let properties = result.records[i].get(0).properties;
-                    if((!my_task || auth_id === properties.userId) && (filter['search_request'] === '' || properties.task_name.indexOf(filter['search_request'], 0) !== -1))
+                    if((!my_task || auth_id === properties.userId) && (filter['search_request'] === '' || properties.task_name.toLowerCase().indexOf(filter['search_request'].toLowerCase(), 0) !== -1))
                         buf[counter++] = {
                             "my_task": properties.userId === auth_id,
                             "task_name": properties.task_name,
@@ -213,7 +213,7 @@ async function sol_by_me_task_list(filter){
                     )
                     for(let j = 0; j < my_tasks.records.length; j++){
                         let properties = my_tasks.records[j].get(0).properties;
-                        if(filter['search_request'] === '' || properties.task_name.indexOf(filter['search_request'], 0) !== -1)
+                        if(filter['search_request'] === '' || properties.task_name.toLowerCase().indexOf(filter['search_request'].toLowerCase(), 0) !== -1)
                             buf[counter++] = {
                                 "task_name": properties.task_name,
                                 "description": properties.description,
@@ -448,7 +448,7 @@ async function search_profile(search_input){
     let result = await session.run('MATCH (n:User) RETURN n ORDER BY n.user_name');
     for(let i = 0; i < result.records.length; i++){
         let properties = result.records[i].get(0).properties
-        if(properties.user_name.indexOf(search_input, 0) !== -1){
+        if(properties.user_name.toLowerCase().indexOf(search_input.toLowerCase(), 0) !== -1){
             buf = { userId: properties.userId }
             break
         }
