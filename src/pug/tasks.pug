@@ -1,0 +1,19 @@
+extends main_template.pug
+
+block content
+    nav(class='w3-bar collapse search_container')
+        div(class='w3-bar-item')
+            input(class="w3-input w3-border w3-padding" type="text" placeholder="Найти по названию..." id="search_input" onkeyup="all_task_list()")
+    nav(class='w3-bar collapse nav_container')
+        p(id='all_task_list' class='w3-bar-item w3-button active-bar-item' onclick='change_url(this)') Все задания
+        p(id='sol_by_me_task_list' class='w3-bar-item w3-button' onclick='change_url(this)') Решенные мной
+        p(id='my_task_list' class='w3-bar-item w3-button' onclick='change_url(this)') Мои задания
+    div(class='task_container')
+        button(class="w3-button w3-block w3-section w3-padding w3-round-xxlarge brown_b" onclick=`$("#task_form").css('display', 'block');`) Добавить задание
+        div(id='task_list' class='card_inline' style='width:80%')
+        div(id='task_filter' class='card_inline' style='width:20%')
+    include task_modal
+
+block scripts
+    script(src='js/tasks.js')
+

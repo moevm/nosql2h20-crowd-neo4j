@@ -1,0 +1,33 @@
+html
+    head
+        title Краудсорсинг
+        meta(http-equiv='Content-Type', content='text/html;charset=utf-8')
+        link(rel='stylesheet', href='/css/style.css')
+        link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css' type='text/css')
+        script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+        script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')
+
+    body(class='body_container search_container')
+        form(action='/register' method='post')
+            h1(class='search_container') Регистрация
+            br
+            br
+            div()
+                p(class='search_container') Введите имя пользователя
+                input(type='text' name="user_name" required)
+                h6()=note_login
+            div()
+                p(class='search_container') Пароль
+                input(type='password' name='password' required)
+            div()
+                p(class='search_container') Повторите пароль
+                input(type='password' name='password_rep' required)
+                h6()=note_pass
+            div(class='search_container')
+                input(class="w3-button  w3-padding w3-round-xxlarge w3-green" type='submit' value='Зарегистрироваться')
+        div(class='search_container')
+            a(class="w3-button w3-block w3-section w3-padding w3-round-xxlarge brown_b" href='/') Авторизация
+        br
+        div(class='search_container')
+            button(class="w3-button  w3-padding w3-round-xxlarge brown_b" onclick=`$("#import_form").css('display', 'block');`) Импорт БД
+    include import_modal

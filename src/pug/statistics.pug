@@ -1,0 +1,33 @@
+extends main_template.pug
+
+block content
+    h1(class='search_container') Статистика системы
+    div(class='task_container')
+        div(id='task_list' class='card_inline' style='width:60%')
+            h4(id='comments_count')
+            h4(id='solutions_count')
+            h4(id='tasks_count')
+            h4(id='like_count')
+        div(id='task_filter' class='card_inline' style='width:40%')
+            div()
+                input(id='user_filter' type='checkbox' checked onclick='get_statistics()')
+                span(class='category') Категории пользователей:
+                br
+                input(type='checkbox' checked value='newbie' onclick='filter[`user_filter`][this.value] = !filter[`user_filter`][this.value]; get_statistics()')
+                span() Новичок
+                br
+                input(type='checkbox' checked value='experienced' onclick='filter[`user_filter`][this.value] = !filter[`user_filter`][this.value]; get_statistics()')
+                span() Опытный
+                br
+                input(type='checkbox' checked value='thinker' onclick='filter[`user_filter`][this.value] = !filter[`user_filter`][this.value]; get_statistics()')
+                span() Мыслитель
+                br
+                br
+            div()
+                input(id='status_filter' type='checkbox' checked onclick='get_statistics()')
+                span(class='category') Статус заданий:
+                br
+                div(id='filter_list')
+
+block scripts
+    script(src='js/statistics.js')

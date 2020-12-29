@@ -1,0 +1,151 @@
+.body_container{
+    background: lightsteelblue;
+}
+
+header a{
+    color:black !important;
+    width:20% !important;
+}
+
+.active-bar-item{
+    font-weight: 900;
+    border-bottom: 3px solid red !important;
+}
+
+.w3-input{
+    border-radius: 5px !important;
+}
+
+.search_container{
+    margin: 10px auto;
+    width: max-content !important;
+}
+
+.nav_container{
+    border-radius: 10px;
+    margin: 10px auto;
+    width: max-content !important;
+}
+
+.var_panel{
+    width: 250px;
+    height: 150px;
+    float: right;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.task_container{
+    width: 60%;
+    margin: 0px auto;
+    max-width: 100%;
+    height: auto;
+    overflow:hidden
+}
+
+.task_card{
+    border: 3px solid #D8BB6B;
+    border-radius: 5px;
+    background-color: #FAEDC2;
+
+
+}
+
+.card_inline{
+    display: inline-block;
+    vertical-align: top;
+    float:left;
+}
+
+a:hover{
+    color: pink !important;
+}
+h3:hover{
+    color: pink !important;
+}
+a:active{
+    color:black !important;
+}
+
+.main_container{
+    background-color: #FADD8D;
+    border: #FAEDC2 2px solid;
+    border-radius: 25px;
+    margin: 10px auto;
+    padding: 5px 5px 10px;
+    width: 1000px;
+}
+
+.popup_image{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.auction_info {
+    margin: 10px auto;
+    width: 1200px;
+    height: 1000px;
+}
+
+.w3-modal-content {
+    border-radius: 25px;
+    background-color: #E9CC7C !important;
+
+}
+.card {
+    border-radius: 25px;
+    background-color: #E9CC7C !important;
+
+}
+
+.card_hat {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: #A7AA5A !important;
+}
+
+h3 {
+    font-weight: 900 !important;
+    padding-top: 10px;
+    margin-bottom: 0 !important;
+}
+
+.category{
+    font-weight: bold;
+}
+
+label {
+    font-family: cursive;
+    margin-left: 10px;
+}
+
+.brown_b {
+    background-color: #D8BB6B !important;
+}
+
+textarea {
+    border-radius: 20px;
+    padding-left: 10px !important;
+    padding-right: 5px !important;
+    background-color: #FADD8D;
+}
+
+.task_description, .solutions_list, .comments_list{
+    border-radius: 20px;
+    padding-left: 10px !important;
+    padding-right: 5px !important;
+    background-color: #FADD8D;
+    margin: 10px auto;
+    align-content: center;
+    width: 50%;
+}
+
+.round_b {
+    border-top-right-radius: 25px;
+
+}
+
+.log {
+    background-color: #A7AA5A !important;
+}

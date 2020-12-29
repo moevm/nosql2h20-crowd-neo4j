@@ -1,0 +1,10 @@
+div(class="w3-modal" id="import_form")
+    div(class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:800px")
+        div(class="w3-center")
+            h3(class="task_info_title") Новое задание
+            span(onclick="document.getElementById('import_form').style.display='none'"
+                class="w3-button w3-xsmall w3-hover-brown round_b w3-display-topright" title="Закрыть") &times;
+        form(class="w3-container" action='/upload' method='post' enctype='multipart/form-data')
+            label() Выберите файлы для загрузки
+            input(class="w3-input w3-border w3-margin-bottom" type="file" name='files' multiple accept='text/csv' required)
+            button(class="w3-button w3-block w3-section w3-padding w3-round-xxlarge brown_b" type='submit') Импортировать

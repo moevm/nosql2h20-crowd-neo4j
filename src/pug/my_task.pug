@@ -1,0 +1,31 @@
+extends main_template.pug
+
+block content
+    div(class="w3-display-container" style="height: 100px")
+        div(class="w3-display-left")
+            p(id='task_status') Статус: open
+        div(class="w3-display-middle")
+            h1(id='task_name')=task_name
+        div(class="w3-display-right")
+            p(id='like_count') Лайки: 4
+
+    div(class='task_description')
+        h2(align='center') Описание задания
+        p(id='description' align='center') Это и правда задание!
+
+    div(class='solutions_list')
+        h2(align='center') Список решений задания
+        div(id='solutions_list')
+
+    div(class='comments_list')
+        h2(align='center') Комментарии
+        div(id='comments_list')
+        div(class="w3-center")
+            button(class="w3-button w3-section w3-padding w3-round-xxlarge brown_b" id='new_comment' onclick=`$("#comment_form").css('display', 'block');`) Новый комментарий
+
+    div(class="w3-center")
+        button(class="w3-button w3-section w3-padding w3-round-xxlarge w3-red" id='close_task' onclick=`close_task()`) Закрыть задание
+    include comment_modal
+
+block scripts
+    script(src='js/my_task.js')

@@ -1,0 +1,22 @@
+extends main_template.pug
+
+block content
+    h6(style='display:none' id='userId')=userId
+    h2(class='search_container' id='user_name') Имя пользователя
+    nav(class='w3-bar collapse nav_container')
+        h4(class='w3-bar-item' id='rating')
+        h4(class='w3-bar-item' id='status')
+    div(class='search_container')
+            a(class="w3-button w3-block w3-section w3-padding w3-round-xxlarge w3-red" href='/exit') Выйти    
+    div(id='sol_story')
+        h1(class='search_container') История успешных решений:
+    nav(class='w3-bar collapse search_container')
+        div(class='w3-bar-item')
+            form(class="w3-container" action='/search_profile' method='get')
+                input(class="w3-input w3-border w3-padding" type="text" placeholder="Найти по имени..." name="search_input")
+
+
+
+
+block scripts
+    script(src='js/profile.js')

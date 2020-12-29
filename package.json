@@ -1,0 +1,24 @@
+{
+  "name": "crowdsource",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "neo4j-driver": "^4.2.1",
+    "pug": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {
+    "jsonfile": "^6.1.0",
+    "multer": "^1.4.2"
+  }
+}

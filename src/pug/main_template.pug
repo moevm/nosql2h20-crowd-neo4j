@@ -1,0 +1,21 @@
+html
+    head
+        title Краудсорсинг
+        meta(http-equiv='Content-Type', content='text/html;charset=utf-8')
+        link(rel='stylesheet', href='/css/style.css')
+        link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css' type='text/css')
+        script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+        script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')
+
+    body(class='body_container')
+        header(class='w3-bar w3-dark-grey')
+            a(href="/" class="w3-bar-item w3-button w3-mobile" id='a_1') Задания
+            a(href="/rating" class="w3-bar-item w3-button w3-mobile" id='a_2') Рейтинг
+            a(href="/profile" class="w3-bar-item w3-button w3-mobile" id='a_3') Профиль
+            a(href="/statistics" class="w3-bar-item w3-button w3-mobile" id='a_4') Статистика
+            a(href="/storage" class="w3-bar-item w3-button w3-mobile" id='a_5') Импорт / Экспорт
+
+        //include modal
+
+        block content
+        block scripts

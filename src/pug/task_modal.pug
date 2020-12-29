@@ -1,0 +1,12 @@
+div(class="w3-modal" id="task_form")
+    div(class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:800px")
+        div(class="w3-center")
+            h3(class="task_info_title") Новое задание
+            span(onclick="document.getElementById('task_form').style.display='none'"
+                class="w3-button w3-xsmall w3-hover-brown round_b w3-display-topright" title="Закрыть") &times;
+        form(class="w3-container" action='/new_task' method='post')
+            label() Название
+            input(class="w3-input w3-border w3-margin-bottom" type="text" name='task_name' required)
+            label() Описание
+            textarea(class="w3-input w3-border w3-margin-bottom" name='description' required)
+            button(class="w3-button w3-block w3-section w3-padding w3-round-xxlarge brown_b" type='submit') Добавить задание

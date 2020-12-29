@@ -1,0 +1,8 @@
+extends main_template.pug
+
+block content
+    button(class='w3-button w3-block w3-section w3-padding w3-round-xxlarge brown_b' onclick=`$("#import_form").css('display', 'block');`) Импортировать
+    button(class='w3-button w3-block w3-section w3-padding w3-round-xxlarge brown_b' onclick='export_db()') Экспортировать
+    include import_modal
+block scripts
+    script(src='js/storage.js')
